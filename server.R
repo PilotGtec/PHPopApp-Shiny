@@ -15,6 +15,7 @@ shinyServer( function(input, output) {
         if(o=="pop") {
             print("pop")
             output$header <- renderText({paste("Population")})
+            output$subheader <- renderText({paste("")})
             plotme <- data.frame(df$Code, df$Pop2010)
             colnames(plotme) <- c("region", "value")
         }
@@ -22,6 +23,9 @@ shinyServer( function(input, output) {
         if(o=="popden") {
             print("popDen")
             output$header <- renderText({paste("Population Density")})
+            output$subheader <- renderText({paste("The population density of the National Capital Region
+                                                  where Metro Manila is at least two orders of 
+                                                  magnitude greater than the rest of the regions.")})
             plotme <- data.frame(df$Code, df$PopDen2010)
             colnames(plotme) <- c("region", "value")
         }

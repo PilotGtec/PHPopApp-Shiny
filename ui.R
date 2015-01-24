@@ -8,8 +8,10 @@ shinyUI(
               is divided into 17 administrative regions. Here, we look at how 
               the popluation is distributed across the islands."),
             selectInput("choice", "Select a Population Measure:",
-                        choices = c("Population", "Population Density"))),
+                        choices = c("Population", "Population Density")),
+            p(a("Click here to read more about the app.", href="http://rpubs.com/PilotGtec22/53965"))),
         mainPanel(h3(textOutput("header")),
+                  p(textOutput("subheader")),
                   #p(uiOutput("avg")),
                   #p(uiOutput("sd")),
                   #p("Hover over a state to see the number of arrests. The horizontal bar below the chart shows the max & min values."),
